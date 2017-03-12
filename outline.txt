@@ -3,7 +3,7 @@ Screencast outline
 "async" and "await" are two new keywords being added to JavaScript in ES2017.
 They make it much easier to work with functions that return promises.
 They can be used today in browsers by utilizing Babel
-and they are enabled by default in Node v7.6.
+and they are enabled by default in Node v7.6 and above.
 
 Promises represent a value that may be available in the future.
 A promise can be resolved or rejected.
@@ -15,12 +15,16 @@ by chaining calls to "then" and "catch".
 It uses the Fetch API which has methods that return promises.
 The Fetch API is commonly used to make REST calls
 from client side web app code.
+The same technique would apply to any functions that return promises.
 
 Here's the same example using the new "async" and "await" keywords.
+Note how all the calls to functions that return promises
+are inside a try block preceded by the await keyword,
+and errors from them are handled in the catch block,
 
-The "await" keyword can be used on any function,
+The "await" keyword can be applied to any function call,
 even ones that do not return promises.
-This allows functions that used to return a promise
+This allows functions that previous returned a promise
 to be changed to return an ordinary value
 without breaking existing callers.
 
@@ -34,7 +38,8 @@ You'll get a SyntaxError.
 
 What happens if you call a function marked as async that returns a promise
 without using await?
-It just returns the promise object without waiting for it to resolve or reject.
+It just returns the promise object
+without waiting for it to resolve or reject.
 
 What happens if you call a function using await,
 but the function is not marked as async?
@@ -48,3 +53,6 @@ My recommendation to is to
 search your code for calls to "then" and "catch" and
 replace all of them with use of "async" and "await".
 It will make your code much easier to read!
+
+You can find all the code demoed here at
+https://github.com/mvolkmann/async-await-screencast

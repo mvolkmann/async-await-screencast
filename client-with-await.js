@@ -15,12 +15,12 @@ async function demo() {
     res = await fetch(url);
     if (res.status === 404) {
       throw new Error(`There are no ${storeName} stores in ${zip}.`);
-    } else {
-      const locations = await res.json();
-      console.log(`${storeName} locations are:`);
-      for (const location of locations) {
-        console.log(location);
-      }
+    }
+
+    const locations = await res.json();
+    console.log(`${storeName} locations are:`);
+    for (const location of locations) {
+      console.log(location);
     }
   } catch (e) {
     console.error(e.message);
