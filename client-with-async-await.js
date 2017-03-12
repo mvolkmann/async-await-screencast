@@ -17,13 +17,13 @@ async function demo() {
       console.log(`There are no ${storeName} stores in ${zip}.`);
     } else {
       const locations = await res.json();
-      console.log(`${storeName} locations are;`);
+      console.log(`${storeName} locations are:`);
       for (const location of locations) {
         console.log(location);
       }
     }
   } catch (e) {
-    console.error(e);
+    console.error(e.message);
   }
 }
 
