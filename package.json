@@ -1,0 +1,30 @@
+{
+  "name": "async-await-demo",
+  "version": "1.0.0",
+  "description": "JavaScript async/await demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvolkmann/async-await-screencast.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "async",
+    "await",
+    "Promise"
+  ],
+  "author": "R. Mark Volkmann <r.mark.volkmann@gmail.com> (http://ociweb.com/mark)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mvolkmann/async-await-screencast/issues"
+  },
+  "homepage": "https://github.com/mvolkmann/async-await-screencast#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "node-fetch": "^1.6.3"
+  },
+  "devDependencies": {}
+}

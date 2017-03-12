@@ -1,0 +1,31 @@
+Screencast outline
+
+"async" and "await" are two new keywords being added to JavaScript in ES2017.
+They make it much easier to work with functions that return promises.
+They can used in Node v7.6? and with Babel today!
+
+Promises represent a value that may be available in the future.
+A promise can be resolved or rejected.
+In general, a promise is resolved when things go right
+and rejected when things go wrong.
+
+Here's an example of code that uses promises directly
+by chaining calls to "then" and "catch":
+It uses the Fetch API which has methods that return promises.
+The Fetch API is commonly used to make REST calls from client side web app code.
+
+Here's the same example using the new "async" and "await" keyword:
+- get zip code of a person from response text
+- get Taco Bell locations from response JSON
+
+The "await" keyword can be used on any function,
+even ones that do not return promises.
+This allows functions that used to return a promise
+to be changed to return an ordinary value
+without breaking callers.
+
+Note how this makes writing asynchronous code
+look similar to writing synchronous code.
+
+My recommendation to is to search your code for calls to "then" and "catch"
+and replace all of them with use of "async" and "await".
