@@ -4,6 +4,8 @@
   "description": "JavaScript async/await demo",
   "main": "index.js",
   "scripts": {
+    "await-client": "node client-with-await",
+    "promise-client": "node client-with-promises",
     "start": "node server"
   },
   "repository": {
