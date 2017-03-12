@@ -18,15 +18,14 @@ function demo() {
     })
     .then(res => {
       if (res.status === 404) {
-        console.log(`There are no ${storeName} stores in ${zip}.`);
-      } else {
-        res.json()
-          .then(locations => {
-            console.log(`${storeName} locations are:`);
-            for (const location of locations) {
-              console.log(location);
-            }
-          });
+        throw new Error(`There are no ${storeName} stores in ${zip}.`);
+      }
+      return res.json();
+    })
+    .then(locations => {
+      console.log(`${storeName} locations are:`);
+      for (const location of locations) {
+        console.log(location);
       }
     })
     .catch(e => console.error(e.message));
