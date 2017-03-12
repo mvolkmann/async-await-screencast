@@ -47,3 +47,4 @@ but methods cannot be marked as async.
 My recommendation to is to
 search your code for calls to "then" and "catch" and
 replace all of them with use of "async" and "await".
+It will make your code much easier to read!

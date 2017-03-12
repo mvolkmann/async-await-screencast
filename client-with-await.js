@@ -14,7 +14,7 @@ async function demo() {
     url = `${urlPrefix}/stores/locations?zip=${zip}&name=${storeName}`;
     res = await fetch(url);
     if (res.status === 404) {
-      console.log(`There are no ${storeName} stores in ${zip}.`);
+      throw new Error(`There are no ${storeName} stores in ${zip}.`);
     } else {
       const locations = await res.json();
       console.log(`${storeName} locations are:`);
