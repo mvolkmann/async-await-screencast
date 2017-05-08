@@ -20,7 +20,7 @@ The same technique would apply to any functions that return promises.
 Here's the same example using the new "async" and "await" keywords.
 Note how all the calls to functions that return promises
 are inside a try block preceded by the await keyword,
-and errors from them are handled in the catch block,
+and errors from them are handled in the catch block.
 
 The "await" keyword can be applied to any function call,
 even ones that do not return promises.
